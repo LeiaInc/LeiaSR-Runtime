@@ -1,21 +1,25 @@
 # LeiaSR Runtime
 
+> **Developer preview.** Builds published here are beta, non-production builds for developers.
+> They are not Leia's official production releases. Display owners should get the runtime
+> from Leia or their display manufacturer.
+
 The runtime and SDK for Leia autostereoscopic 3D displays. Eye tracking drives a weaver that
 interlaces left and right views for the panel's lenticular lens, so the image is 3D without glasses.
 
-This repository is where Leia publishes:
+This repository is where Leia publishes developer previews of:
 
-- **Runtime installers**, one GitHub release per version: Windows x64 (`.exe`, with the
-  Windows on ARM payload) and Linux (`.deb`), each with a `SHA256SUMS` file.
+- **Runtime installers**, one GitHub release per version, each with a `SHA256SUMS` file:
+  Windows x64 (`.exe`) and Linux (`.deb`), with macOS (`.pkg`) and Windows on ARM previews
+  added as they become available.
 - **The v2 C SDK**: the `sr_*.h` headers, the loader and a CMake package
   (`find_package(LeiaSR)`), so an application or plugin can build without the runtime installed.
 
 ## Releases
 
-| Channel | Tag | Meant for |
-|---|---|---|
-| Pre-release | `v1.39.0-rcN` | QA and early integration testing |
-| Latest | `v1.39.0` | Everyone. Only a release that has passed QA becomes Latest |
+A version appears here only after it has passed Leia's internal QA. Release candidates
+(`v1.39.0-rcN`) are tested internally and are not published here. Every release here is
+marked as a pre-release (preview).
 
 The Windows installer is Authenticode-signed by **Leia, Inc.** Check every download against the
 release's `SHA256SUMS`.
